@@ -48,7 +48,7 @@ fn read_vecs<R: Read + BufRead>(r: &mut R) -> Vec<String> {
 fn read_line<R: Read + BufRead>(r: &mut R) -> String {
     let mut result = String::new();
     r.read_line(&mut result).unwrap();
-    result.trim_end().into()
+    result.trim().into()
 }
 
 #[cfg(test)]
