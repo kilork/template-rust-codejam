@@ -1,4 +1,8 @@
-use std::io::{prelude::*, BufRead, BufReader};
+use std::io::{BufRead, BufReader};
+use std::io::prelude::*;
+
+// dbg!
+// rustc 1.24.0
 
 fn main() {
     let stdio = std::io::stdin();
