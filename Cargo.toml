@@ -16,3 +16,4 @@ repository = "https://github.com/kilork/{{project-name}}"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+rand = "0.7"

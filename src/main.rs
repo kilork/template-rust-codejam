@@ -5,6 +5,17 @@ use std::io::prelude::*;
 // rustc 1.24.0
 
 fn main() {
+    /*
+    for i in 1..100001 {
+        use rand::prelude::*;
+        let x: u32 = random();
+        print!("{} ", x);
+        if i % 1000 == 0 {
+            println!();
+        }
+    }
+    return;
+    */
     let stdio = std::io::stdin();
     let input = BufReader::new(stdio.lock());
     let mut stdout = std::io::stdout();
@@ -32,6 +43,12 @@ fn process_cases<R: std::io::BufRead + Read, W: Write>(mut r: R, w: &mut W) {
 
 fn read_usize<R: Read + BufRead>(r: &mut R) -> usize {
     read_line(r).parse().unwrap()
+}
+
+fn read_pair<R: Read + BufRead>(r: &mut R) -> (usize, usize) {
+    let line = read_line(r);
+    let mut numbers = line.split_whitespace().map(|x| x.parse().unwrap());
+    (numbers.next().unwrap(), numbers.next().unwrap())
 }
 
 fn read_vec<R: Read + BufRead>(r: &mut R) -> Vec<u64> {
