@@ -8,9 +8,12 @@ Dual-licensed under `MIT` or the [UNLICENSE](http://unlicense.org/).
 
 ## Usage
 
-Add dependency to Cargo.toml:
-
 ```toml
-[dependencies]
-{{project-name}} = "0.1"
+cargo test
+```
+
+## Test with Docker and Rust 1.24.1
+
+```bash
+docker build .
 ```
